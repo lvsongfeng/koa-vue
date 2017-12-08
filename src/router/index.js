@@ -5,9 +5,9 @@ import App from '../App'
 export default new Router({
   routes: [
     {
-      path: '/index',
+      path: '/',
       name: 'Home',
-      component: () => import('../App'),
+      component: () => import('@/components/home'),
       children: [
         {
           path: 'list',
@@ -18,8 +18,13 @@ export default new Router({
             name: 'detail',
             component: () => import('@/components/detail')
           }]
-        },
+        }      
       ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/components/login')
     }
   ]
 })
