@@ -7,24 +7,20 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@/components/home'),
-      children: [
-        {
-          path: 'list',
-          name: 'list',
-          component: () => import('@/components/home'),
-          children: [{
-            path: 'detail/:id',
-            name: 'detail',
-            component: () => import('@/components/detail')
-          }]
-        }      
-      ]
+      component: () => import('@/components/home')
     },
     {
       path: '/login',
       name: 'login',
       component: () => import('@/components/login')
+    },
+    {
+      path: '/ui',
+      name: 'ui',
+      component: () => import('@/commonComponents/index'),
+      children: [
+        {path: '/ui/alter',  component: () => import('@/commonComponents/alert')}
+      ]
     }
   ]
 })

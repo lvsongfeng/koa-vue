@@ -1,0 +1,76 @@
+.is-clearfix {
+  @include clearfix;
+}
+.is-pulled-left {
+  float: left !important;
+}
+
+.is-pulled-right {
+  float: right !important;
+}
+// text-align
+$alignments: ('centered': 'center', 'left': 'left', 'right': 'right');
+@each $alignment, $text-align in $alignments {
+  .has-text-#{$alignment} {
+    text-align: #{$text-align} !important;
+  }
+}
+// overflw
+.is-ellipsis {
+  @include text-ellipsis;
+}
+
+// visibility
+
+$displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex' 'none';
+@each $display in $displays {
+  .is-#{$display} {
+    display: #{$display} !important;
+  }
+}
+
+// position
+$positions: 'absolute' 'relative' 'fixed';
+@each $position in $positions {
+  .is-#{$position} {
+    position: #{$position} !important;
+  }
+}
+// margin padding 
+$gaps: ("0": 0, "5": 5px, "10": 10px, "15": 15px, "20": 20px, "30": 30px, "50": 50px) !default;
+@each $number, $gap in $gaps {
+  .is-margin-#{$number} {
+    margin: $gap;
+  }
+  .is-mt-#{$number} {
+    margin-top: $gap;
+  }
+  .is-mb-#{$number} {
+    margin-bottom: $gap !important;
+  }
+  .is-ml-#{$number} {
+    margin-left: $gap !important;
+  }
+  .is-mr-#{$number} {
+    margin-right: $gap !important;
+  }
+  .is-padding-#{$number} {
+    padding: $gap !important;;
+  }
+  .is-pt-#{$number} {
+    padding-top: $gap !important;
+  }
+  .is-pb-#{$number} {
+    padding-bottom: $gap !important;
+  }
+  .is-pl-#{$number} {
+    padding-left: $gap !important;
+  }
+  .is-pr-#{$number} {
+    padding-right: $gap !important;
+  }
+}
+//cursor
+.is-pointer{
+  cursor: pointer;
+}

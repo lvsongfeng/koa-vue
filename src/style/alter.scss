@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.zp-modal{
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.zp-alter {
+  position: absolute;
+  height: 200px;
+  width: 560px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 15px;
+  background-color: #fff;
+  z-index: 30;
+}
+.zp-popup{
+  &__close{
+    right: 10px;
+    top: 0;
+  }
+  &__footer {
+    justify-content: space-around;
+  }
+}
+
